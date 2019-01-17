@@ -1,0 +1,26 @@
+<div class="container" ng-controller="tabCtrl">
+    <div class="table-responsive">
+        <h1>All products</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="prod in produse">
+                    <td>{{prod.id}}</td>
+                    <td>{{ prod.name }}</td>
+                    <td>{{prod.category.name}}</td>
+                    <td>{{prod.decription}}</td>
+                    <td>{{prod.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Catalog Produse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/scriptAngular.js"></script>
+
+<style>
+    .navbar {
+        margin-bottom: 50px;
+        border-radius: 0;
+    }
+
+
+    footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+        margin-bottom: 50px;
+    }
+</style>
+</head>
+
+<body ng-app="ecommApp" ng-controller="myCtrl">
+
+    <div ng-include="'html/carousel.html'"></div>
+    
+    <div ng-include="'html/menu.html'"></div>
+    
+    <div ng-view></div>
+    <br>
+    <br>
+    <div ng-include="'html/footer.html'"></div>
+</body>
+</html>

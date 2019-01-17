@@ -1,0 +1,66 @@
+<div class="container" >
+    
+    <div class="col-sm-3"></div>
+    
+    <div class="col-sm-6" style="background-color:WhiteSmoke;" ng-show="showMe">
+        <h4>Fill in the fields to register:</h4>
+        <br>
+        <form name="registerForm" class="form-horizontal" style="padding:15px">
+            <div class="form-group">
+                <label for="usrName">Name:*</label>
+                <input type="text" class="form-control" id="usrName" name="usrName" ng-model="usrName" required>
+                <p ng-show="registerForm.usrName.$touched && registerForm.usrName.$invalid" style="color:red;">Name is required!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="usrSurname">Surname:*</label>
+                <input type="text" class="form-control" id="usrSurname" name="usrSurname" ng-model="usrSurname" required>
+                <p ng-show="registerForm.usrSurname.$touched && registerForm.usrSurname.$invalid" style="color:red;">Surname is required!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="usrEmail">Email:*</label>
+                <input type="email" class="form-control" id="usrEmail" name="usrEmail" ng-model="usrEmail" required />
+                <p ng-show="registerForm.usrEmail.$touched && registerForm.usrEmail.$invalid" style="color:red;">Incorrect Email!</p>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password:*</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+
+            <div class="form-group">
+                <label for=""></label>
+                <label class="radio-inline">
+                    <input type="radio" name="optradio" checked>
+                    Male
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">
+                  Female
+                </label>
+            </div>
+            <span>
+                <button 
+                    style="height:30px;width:200px" 
+                    type="submit"
+                    class="btn btn-success"
+                    ng-click="registerFunct()">
+                    Register
+                </button>
+                
+                <button  
+                style="position:absolute;right:15px; height:30px;width:200px" 
+                type="reset"
+                class="btn btn-danger"
+                onclick="location.href='#!popularProd.html';">
+                    Cancel
+                </button>
+            </span>
+           
+        </form>
+    </div>
+    
+    <div class="col-sm-6" style="background-color:WhiteSmoke;" ng-show="showMeSuccess"><h1>Success!</h1></div>
+    <div class="col-sm-3"></div>
+</div>
